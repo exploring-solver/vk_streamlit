@@ -8,7 +8,7 @@ from langchain.prompts import PromptTemplate
 
 #Please replace your Hugging face access token in the below 'api_key'
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "api_key"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 
 llm = HuggingFaceHub(
     repo_id="mistralai/Mistral-7B-Instruct-v0.2", model_kwargs={"temperature": 0.5, "max_length": 64}
