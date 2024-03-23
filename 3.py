@@ -28,9 +28,6 @@ st.title("Catalog Scanning App")
 pdf_file = st.file_uploader("Upload a PDF file", type="pdf")
 
 if pdf_file is not None:
-    displayPDF(pdf_file)
-
-    # Read the PDF file
     pdf_reader = PyPDF2.PdfReader(pdf_file)
     # Extract the content
     content = ""
@@ -38,3 +35,6 @@ if pdf_file is not None:
         content += pdf_reader.pages[page].extract_text()
 
     model(content)
+    displayPDF(pdf_file)
+
+    # Read the PDF file
